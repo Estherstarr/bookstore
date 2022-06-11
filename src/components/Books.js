@@ -17,8 +17,7 @@ const Books = () => {
   }, []);
 
   return (
-    <>
-      <AddBook />
+    <div className="container">
       {books.map((book) => (
         <Book
           key={book.item_id}
@@ -27,7 +26,9 @@ const Books = () => {
           deleteBook={() => handleDeleteBook(book.item_id)}
         />
       ))}
-    </>
+      <hr className="line" />
+      <AddBook />
+    </div>
   );
 };
 

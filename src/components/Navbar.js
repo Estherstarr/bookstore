@@ -3,12 +3,23 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="navClass">
-      <Link to="/">Books</Link>
-      <Link to="/categories">
-        Categories
-      </Link>
-    </nav>
+    <div className="navigation">
+      <div className="topnav__bar">
+        <div className="navlinks">
+          <Link to="/" className="logo__text">
+            Bookstore CMS
+          </Link>
+          <ul>
+            <li>
+              <Link to="/">BOOKS</Link>
+            </li>
+            <li>
+              <Link to="/categories">CATEGORIES</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 }
 export default Navbar;

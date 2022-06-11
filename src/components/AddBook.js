@@ -21,12 +21,24 @@ const AddBook = () => {
   };
 
   return (
-    <div id="form-container">
-      <h2>ADD NEW BOOK</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input ref={titleRef} type="text" name="title" placeholder="Title" />
-        <input ref={authorRef} type="text" name="author" placeholder="Author" />
-        <button type="submit" id="add-book">
+    <div>
+      <span className="title">ADD NEW BOOK</span>
+      <form onSubmit={(e) => handleSubmit(e)} className="input__book">
+        <input
+          ref={titleRef}
+          type="text"
+          name="title"
+          placeholder="Book title"
+          className="panel-bg "
+        />
+        <input
+          ref={authorRef}
+          type="text"
+          name="author"
+          placeholder="Author"
+          className="panel-bg "
+        />
+        <button type="submit" className="btn_blue2" value="Add book">
           ADD BOOK
         </button>
       </form>

@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 
 function Navbar() {
   return (
-    <nav className="navClass">
-      <Link to="/">Books</Link>
-      <Link to="/categories">
-        Categories
-      </Link>
-    </nav>
+    <div className="navbar">
+      <nav className="navigation">
+        <h1 className="header-text">Bookstore CMS</h1>
+        <Link to="/" className="link">
+          BOOKS
+        </Link>
+        <Link to="/category" className="link">
+          CATEGORY
+        </Link>
+      </nav>
+      <CgProfile className="profile" />
+    </div>
   );
 }
 export default Navbar;

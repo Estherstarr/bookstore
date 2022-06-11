@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Book = ({ title, author, deleteBook }) => (
   <>
-    <h3>{title}</h3>
-    <h4>{author}</h4>
+    <h2>{title}</h2>
+    <h5>{author}</h5>
     <button type="button" onClick={deleteBook}>Delete</button>
   </>
 );

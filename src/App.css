@@ -19,7 +19,6 @@ li {
 :root {
   --bubble-gum-pink: #ff5ab7;
   --black: #1e1e1e;
-  --black: #000;
   --cool-blue: #4386bf;
   --pinkish-grey: #c7c7c7;
   --pale-grey: #f5f6fa;
@@ -80,7 +79,6 @@ button {
   width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -95,6 +93,7 @@ button {
   border: solid 1px var(--white-two);
   background-color: var(--white);
 }
+
 .btn_blue2 {
   color: var(--white);
   border-radius: 3px;

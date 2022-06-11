@@ -1,20 +1,21 @@
 import React, { useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
+import { postBook } from '../redux/books/books';
 
-const AddBook = ({ addNewBook }) => {
+const AddBook = () => {
   const titleRef = useRef();
   const authorRef = useRef();
-
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: titleRef.current.value,
       author: authorRef.current.value,
       category: 'category',
     };
-    addNewBook(newBook);
+    dispatch(postBook(newBook));
     titleRef.current.value = '';
     authorRef.current.value = '';
   };
@@ -31,10 +32,6 @@ const AddBook = ({ addNewBook }) => {
       </form>
     </div>
   );
-};
-
-AddBook.propTypes = {
-  addNewBook: PropTypes.func.isRequired,
 };
 
 export default AddBook;

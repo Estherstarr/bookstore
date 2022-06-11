@@ -1,12 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkStatus } from '../redux/categories/categories';
 
 const Categories = () => {
   const categories = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+
+  const handleCheckStatus = () => {
+    dispatch(checkStatus());
+  };
+
   return (
     <div>
-      <h1>{categories}</h1>
-      <button type="button">Check Status</button>
+      {categories.length > 0 && (
+        <h1>{categories}</h1>
+      )}
+      <button type="button" onClick={handleCheckStatus}>
+        Check Status
+      </button>
     </div>
   );
 };

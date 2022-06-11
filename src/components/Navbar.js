@@ -1,24 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 
 function Navbar() {
   return (
-    <div className="navigation">
-      <div className="topnav__bar">
-        <div className="navlinks">
-          <Link to="/" className="logo__text">
-            Bookstore CMS
-          </Link>
-          <ul>
-            <li>
-              <Link to="/">BOOKS</Link>
-            </li>
-            <li>
-              <Link to="/categories">CATEGORIES</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div className="navbar">
+      <nav className="navigation">
+        <h1 className="header-text">Bookstore CMS</h1>
+        <Link to="/" className="link">
+          BOOKS
+        </Link>
+        <Link to="/category" className="link">
+          CATEGORY
+        </Link>
+      </nav>
+      <CgProfile className="profile" />
     </div>
   );
 }
